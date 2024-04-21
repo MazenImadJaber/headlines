@@ -4,23 +4,26 @@ import { useState } from "react";
 
 function App() {
   const [count, setCount] = useState(0);
+  const increment = () => {
+    setCount((oldCount)=> oldCount + 1);
+  }
+  const decrement = () => {
+    if (count > 0){
+      setCount((oldCount)=> oldCount - 1);
+    }
+    
+  }
   return (
     <div className="App">
       <h1>Like counter</h1>
       <p>Overall count: {count}</p>
       <button
-        onClick={() => {
-          setCount(count + 1);
-        }}
+        onClick={increment}
       >
         like
       </button>
       <button
-        onClick={() => {
-          if (count > 0) {
-            setCount(count - 1);
-          }
-        }}
+        onClick={decrement}
       >
         dislike
       </button>
