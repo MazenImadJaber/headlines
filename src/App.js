@@ -6,7 +6,8 @@ import Headline from "./components/headline";
 function App() {
 return(
   <div>
-   <Headline /> 
+   <Headline title="Bananas" /> 
+   <Headline title="Grapes" /> 
   </div>
 
 )

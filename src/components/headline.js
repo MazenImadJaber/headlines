@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Headline(){
+export default function Headline({title, url}){
     const [count, setCount] = useState(0);
     const increment = () => {
       setCount((oldCount)=> oldCount + 1);
@@ -13,7 +13,7 @@ export default function Headline(){
     }
     return (
       <div className="App">
-        <h1>Like counter</h1>
+        <h1>{title}</h1>
         <p>Overall count: {count}</p>
         <button
           onClick={increment}
