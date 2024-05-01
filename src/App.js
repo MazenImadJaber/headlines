@@ -1,4 +1,5 @@
 import "./App.css";
+import SearchBar from "./components/SearchBar";
 import Headline from "./components/headline";
 import { useNewsArticles } from "./hooks/useNewsArticles";
 
@@ -9,7 +10,8 @@ function App() {
     return <p>loading . . .</p>
   }
 return(
-  <div>
+  <div className="App">
+    <SearchBar/>
    {headlines.map((x)=><Headline {...x}/>
    )}
   </div>
