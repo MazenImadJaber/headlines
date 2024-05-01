@@ -1,13 +1,17 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { useState } from "react";
 import Headline from "./components/headline";
+import { useNewsArticles } from "./hooks/useNewsArticles";
 
 function App() {
+
+  const {loading, headlines, error } = useNewsArticles()
+  if(loading){
+    return <p>loading . . .</p>
+  }
 return(
   <div>
-   <Headline title="Bananas" /> 
-   <Headline title="Grapes" /> 
+   {headlines.map((x)=><Headline {...x}/>
+   )}
   </div>
 
 )
