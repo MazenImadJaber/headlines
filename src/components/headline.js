@@ -13,8 +13,12 @@ export default function Headline({title, url}){
     }
     return (
       <div className="App">
-        <h1>{title}</h1>
+        <h1 >{title}</h1>
+        <a href={url}>link</a>
         <p>Overall count: {count}</p>
+        
+        
+
         <button
           onClick={increment}
         >
